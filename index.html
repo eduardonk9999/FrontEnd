@@ -4,65 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portifolio</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <nav>
-        <ul>
-            <li><a href="about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <section id="about">
-       <div>empty block</div>
-       <article>
-         <div>
-            <h1>Creative Developer</h1>
-         </div>
-         <div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, animi dolorem amet inventore repellendus dolorum obcaecati, voluptatibus possimus laudantium minima vero nemo eos eius numquam placeat. Eaque unde repudiandae quis!</p>
-         </div>   
+    <main>
+        <section id="about" class="about">
+            <div class="empty"></div>
+            <article>
+                <div class="title">
+                    <h1>Creative Developer</h1>
+                </div>
+                <div class="description">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, animi dolorem amet inventore repellendus dolorum obcaecati, voluptatibus possimus laudantium minima vero nemo eos eius numquam placeat. Eaque unde repudiandae quis!</p>
+                </div>   
+            </article>
+        </section>
+    
+        <section id="services" class="services services-html sticky">
+            <article>
+                <figure>
+                    <img src="assets/img/triangolo.png" alt="trigangulo" width="200" />
+                </figure>
+                <div class="text">
+                    <h2>HTML</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur earum tempore labore molestiae sunt, natus veniam. Vel optio quo quia odit quaerat! Reprehenderit delectus ea nisi, sunt harum fugiat?</p>
+                    <a href="https://wikipedia.com">More about HTML</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="services services-css sticky">
+        <article>
+                <figure>
+                    <img src="assets/img/polygon.png" alt="trigangulo" width="200" />
+                </figure>
+                <div class="text">
+                    <h2>CSS</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur earum tempore labore molestiae sunt, natus veniam. Vel optio quo quia odit quaerat! Reprehenderit delectus ea nisi, sunt harum fugiat?</p>
+                    <a href="https://wikipedia.com">More about CSS</a>
+                </div>
         </article>
-    </section>
-   
-    <section id="services">
-        <figure>
-            <img src="assets/img/triangolo.png" alt="trigangulo" width="200" />
-        </figure>
-        <div>
-            <h2>HTML</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur earum tempore labore molestiae sunt, natus veniam. Vel optio quo quia odit quaerat! Reprehenderit delectus ea nisi, sunt harum fugiat?</p>
-            <a href="https://wikipedia.com">More about HTML</a>
-        </div>
-    </section>
+        </section>
 
-    <section>
-        <figure>
-             <img src="assets/img/polygon.png" alt="trigangulo" width="200" />
-        </figure>
-        <div>
-            <h2>CSS</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur earum tempore labore molestiae sunt, natus veniam. Vel optio quo quia odit quaerat! Reprehenderit delectus ea nisi, sunt harum fugiat?</p>
-            <a href="https://wikipedia.com">More about CSS</a>
-        </div>
-    </section>
+        <section class="services services-js sticky">
+            <article>
+                <figure>
+                    <img src="assets/img/rectangle.png" alt="trigangulo" width="200" />
+                </figure>
+                <div  class="text" class="text">
+                    <h2>JavaScript</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur earum tempore labore molestiae sunt, natus veniam. Vel optio quo quia odit quaerat! Reprehenderit delectus ea nisi, sunt harum fugiat?</p>
+                    <a href="https://wikipedia.com">More about JavaScript</a>
+                </div>
+            </article>
+        </section>
+    </main>
 
-    <section>
-        <figure>
-            <img src="assets/img/rectangle.png" alt="trigangulo" width="200" />
-        </figure>
-        <div>
-            <h2>JavaScript</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio pariatur earum tempore labore molestiae sunt, natus veniam. Vel optio quo quia odit quaerat! Reprehenderit delectus ea nisi, sunt harum fugiat?</p>
-            <a href="https://wikipedia.com">More about JavaScript</a>
-        </div>
-    </section>
+    <footer>
+        <section id="contact" class="contact full-screen ">
+            <a href="malito:eduardosilva07.js@gmail.com">eduardosilva07.js@gmail.com</a>
+        </section>
+    </footer>
 
-    <section id="contact">
-        <a href="malito:eduardosilva07.js@gmail.com">eduardosilva07.js@gmail.com</a>
-    </section>
+
+    <script src="/assets/js/app.js"></script>
 </body>
 </html>

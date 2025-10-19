@@ -5,12 +5,51 @@
 }
 
 html, body {
+    --border-radius: 50px;
+
     background: #000;
     color: #FFF;
     font-size: 30px;
-    font-family: sans-serif;
+    font-family: "Syne", sans-serif;
 }
 
+h1 {
+    font-size: 100px;
+}
+
+h2 {
+    font-size: 60px;
+    margin: 10px 0;
+    font-family: "Space Mono", monospace;
+}
+
+a {
+    color: #FFF;
+    text-decoration: none;
+    margin-top: 40px;
+}
+
+
+section {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 100px);
+    top: 100px;
+    z-index: 2;
+}
+
+section.sticky {
+    position: sticky;
+    margin-top: 100px;
+}
+
+section.full-screen {
+    height: 100vh;
+    top: 0;
+    margin-top: 0;
+    z-index: 3;
+}
 nav {
     position: fixed;
     width: 100%;
@@ -18,4 +57,219 @@ nav {
     top: 0;
     left: 0;
     font-size: 20px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav ul li a {
+    color: #fff;
+    font-family: monospace;
+}
+
+/* about section */
+
+section.about .empty {
+    flex-basis: 37.5vw;
+    background-color: #e5e5e5;
+    border-radius: var(--border-radius);
+    transition: flex-basis 1s cubic-bezier(0, .9,.4,.99);
+}
+
+section.about article {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+section.about article .title {
+    flex: 2; /* ele cresce duas vezes mais em relação aos outros itens flexiveis ou seja ele é duas vezes maior que a descrição*/
+    display: flex;
+    align-items: anchor-center;
+    background: #1c47ff;
+    border-radius: var(--border-radius);
+    padding: 3.125vw;
+}
+
+section.about .description {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: #d6a3fb;
+    border-radius: var(--border-radius);
+    padding: 3.125vw;
+    color: #000;
+    font-size: 22px;
+    text-align: justify;
+    line-height: 26px;
+    color: #000;
+}
+
+/* services section */
+section.services article {
+    display: flex;
+    width: 100%;
+}
+
+section.services figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 56.25vw;
+    background: #d0ff94;
+    border-radius: var(--border-radius);
+}
+
+section.services figure img {
+    width: 50%;
+}
+
+section.services .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis:43.75vw;
+    background: #1f1a1c;
+    padding: 3.125vw;
+    border-radius: var(--border-radius);
+}
+
+section.services text a {
+    font-family: monospace;
+}
+
+/* section overrides */
+
+section.services .services-html figure{
+    color: #d6a3fb;
+}
+
+section.services.services-html .text h2,
+section.services.services-html .text a {
+    color: #d6a3fb;
+}
+
+
+section.services.services-css figure{
+    background: #1c47ff;
+}
+
+section.services.services-css .text h2,
+section.services.services-css .text a {
+    color: #d0ff94;
+}
+
+
+section.services .services-js figure{
+    color: #d0ff94;
+}
+
+.contact {
+    align-items: center;
+    justify-self: center;
+    background: linear-gradient(#1c47ff, #d0ff94 60%, #d6a3fb 70%, #e5e5e5);
+    border-radius: var(--border-radius);
+}
+
+.contact a {
+    cursor: pointer;
+    font-size: 40px;
+    font-family: monospace;
+    color: #000;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    font-family: "Space Mono", monospace;
+
+    transition: color 2s;
+}
+
+section.contact a:hover {
+    color: #fff
+}
+
+/*ANIMATION*/
+section.services.services-html figure img {
+    animation: float;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.77,.28,.42,.93);
+}
+
+
+@keyframes float {
+    0% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(20px);
+    }
+}
+
+
+
+/*RESPONSIVE*/
+@media only screen and (max-width: 768px) {
+   html, body {
+       --border-radius: 25px;
+   }
+
+   h1 {
+    font-size: 60px;
+   }
+
+   h2 {
+    font-size: 40px;
+   }
+
+   nav ul li {
+    margin-left: 25px;
+   }
+
+   section.services .text {
+        padding: 20px;
+        font-size: 16px;
+   }
+
+   section.services article {
+        flex-direction: column;
+   }
+
+   section.services figure {
+        flex-basis: 25vh;
+   }
+
+   section.services figure img {
+        width: 20%;
+   }
+
+   .contact a {
+        font-size: 25px;
+        transform: rotate(90deg);
+   }
+
+   section{
+        height: calc(80vh - 210px);
+   }
+
+       
+
+
+   section.services figure {
+        padding: 75px 0;
+   }
+
 }
